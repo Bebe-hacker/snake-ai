@@ -10,7 +10,7 @@ var snake = {
   xVel: 0,
   yVel: -1,
   tail: [],
-  tailLength: 5,
+  tailLength: 1,
   sizeX: board.width / board.size,
   sizeY: board.height / board.size,
   score: 0,
@@ -19,7 +19,7 @@ var snake = {
 
 var apple = {
   x: Math.floor(Math.random() * 20) * 20,
-  y: Math.floor(Math.random() * 20) * 20
+  y: Math.floor(Math.random() * 20) * 20,
 }
 
 var moves = []

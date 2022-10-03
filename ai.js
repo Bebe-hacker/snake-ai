@@ -25,7 +25,7 @@ async function fitModel(moveRecord) {
      const expected = tf.oneHot(tf.tensor1d([getExpected(moveRecord[i])], 'int32'), 4).cast('float32');
      posArr = tf.tensor2d([moveRecord[i]]);
      const h = await model.fit(posArr, expected, {
-         batchSize: 3,
+         batchSize: 10,
          epochs: 1
      });
      console.log("Loss after Epoch " + i + " : " + h.history.loss[0]);
